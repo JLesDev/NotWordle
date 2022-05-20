@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fireworks-js": "^1.4.0",
+    "live-server": "^1.1.0"
+  }
+}
