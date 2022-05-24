@@ -38,8 +38,25 @@ h1 {
       align-content: center;
       margin-left: 32rem;
       margin-top: 1rem;
-      display: flex;
+      
+  }
+
+.first-row{
+     display: flex;
       align-items: center;
       justify-content: center;
-  }
+}
+
+.second-row{
+     display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.third-row{
+     display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
 
