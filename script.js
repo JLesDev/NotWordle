@@ -157,15 +157,12 @@ function checkGuess () {
                 wrongCounter += 1;
             }
         }
+
         if (wrongCounter === wrongAmount){
             guessntString = rightGuessString;
             return;
         }
-        else{
-            toastr.info(`Wrong amount: "${wrongCounter}"`);
-            return;  
-        }
-
+        toastr.info(`Test 1`);
         if (guessntString === rightGuessString) 
         {
         toastr.success("You won! Congrats!");
@@ -186,7 +183,7 @@ function checkGuess () {
         {
             toastr.error("You've run out of guesses! Game over!");
             toastr.info(`The right word was: "${rightGuessString}"`);
-        
+            return;
         }
 
     
