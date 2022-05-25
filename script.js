@@ -111,6 +111,7 @@ function checkGuess () {
         if (letterPosition === -1) {
             letterColor = 'grey'
             wrongCounter += 1
+            return
         } else {
             // now, letter is definitely in word
             // if letter index and right guess index are the same
@@ -118,9 +119,11 @@ function checkGuess () {
             if (currentGuess[i] === rightGuess[i]) {
                 // shade green 
                 letterColor = 'green'
+                return
             } else {
                 // shade box yellow
                 letterColor = 'yellow'
+                return
             }
 
             rightGuess[letterPosition] = "#"
@@ -139,6 +142,7 @@ function checkGuess () {
 
         if (wrongCounter === wrongAmount){
             guessntString = rightGuessString
+            return
          }
     
 
