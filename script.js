@@ -102,26 +102,33 @@ function checkGuess () {
     }
 
     
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) 
+    {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]
         toastr.info(`Guesses "${guessesRemaining}"`)
         let letterPosition = rightGuess.indexOf(currentGuess[i])
         // is letter in the correct guess
-        if (letterPosition === -1) {
+        if (letterPosition === -1) 
+        {
             letterColor = 'grey'
             wrongCounter += 1
             return
-        } else {
+        } 
+        else 
+        {
             // now, letter is definitely in word
             // if letter index and right guess index are the same
             // letter is in the right position 
-            if (currentGuess[i] === rightGuess[i]) {
+            if (currentGuess[i] === rightGuess[i]) 
+            {
                 // shade green 
                 letterColor = 'green'
                 return
-            } else {
+            } 
+            else 
+            {
                 // shade box yellow
                 letterColor = 'yellow'
                 return
@@ -150,23 +157,29 @@ function checkGuess () {
         }
     
 
-    if (guessntString === rightGuessString) {
+        if (guessntString === rightGuessString) 
+        {
         toastr.success("You won! Congrats!");
         toastr.info(`The 'right word' was: "${rightGuessString}"`)
         guessesRemaining = 0
         return
-    } 
-    else {
+        } 
+
+        else 
+        {
         guessesRemaining -= 1;
         currentGuess = [];
         nextLetter = 0;
+        return
         }
 
-    if (guessesRemaining === 0) {
+        if (guessesRemaining === 0) 
+        {
             toastr.error("You've run out of guesses! Game over!")
             toastr.info(`The right word was: "${rightGuessString}"`)
         
         }
+
     }
     
 }
