@@ -85,7 +85,7 @@ function checkGuess () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let guessString = ''
     let rightGuess = Array.from(rightGuessString)
-    wrongCounter = 0
+
 
     for (const val of currentGuess) {
         guessString += val
@@ -112,8 +112,8 @@ function checkGuess () {
         // is letter in the correct guess
         if (letterPosition === -1) 
         {
-            letterColor = 'grey'
-            wrongCounter += 1
+            letterColor = 'grey';
+            wrongCounter += 1;
         }
         else 
         {
@@ -131,7 +131,7 @@ function checkGuess () {
                 letterColor = 'yellow'
             }
 
-            rightGuess[letterPosition] = "#"
+            rightGuess[letterPosition] = "#";
         }
         
         let delay = 250 * i
@@ -143,17 +143,14 @@ function checkGuess () {
                 shadeKeyBoard(letter, letterColor)
             }, delay)
         
-        
-
         if (wrongCounter === 5){
-            guessntString = rightGuessString
+            guessntString = rightGuessString;
             return
          }
         else{
-            toastr.info(`Wrong amount: "${wrongCounter}"`)
+            toastr.info(`Wrong amount: "${wrongCounter}"`);
             return
         }
-    
 
         if (guessntString === rightGuessString) 
         {
@@ -178,6 +175,15 @@ function checkGuess () {
         
         }
 
+    }
+    wrongCounter = 0;
+    for (let i = 0; i < 5; i++) 
+    {
+        let letterPosition = rightGuess.indexOf(currentGuess[i])
+        if (letterPosition === -1) 
+        {
+            wrongCounter += 1
+        }
     }
     
 }
