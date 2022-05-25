@@ -54,7 +54,7 @@ document.addEventListener("keyup", (e) => {
     } else {
         insertLetter(pressedKey)
     }
-})
+}
 
 function insertLetter (pressedKey) {
     if (nextLetter === 5) {
