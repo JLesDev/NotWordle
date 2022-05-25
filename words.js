@@ -1996,7 +1996,6 @@ export const WORDS = [
     'veils',
     'mused',
     'mains',
-    'myrrh',
     'racks',
     'galls',
     'gnats',
