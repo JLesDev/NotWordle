@@ -32,7 +32,7 @@ h1 {
     display: flex;
     font-family: sans-serif;
   }
-
+/*
   #keyboard-cont{
       align-items: center;
       align-content: center;
@@ -61,11 +61,36 @@ h1 {
       justify-content: center;
 }
 
+.keyboard-button{
+    margin: 0.1rem;
+}*/
+
 .toast-message{
     font-family: sans-serif;
 }
 
-.keyboard-button{
-    margin: 0.1rem;
+
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
