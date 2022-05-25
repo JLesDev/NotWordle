@@ -115,7 +115,7 @@ function checkGuess () {
             letterColor = 'grey'
             wrongCounter += 1
             return
-        } 
+        }
         else 
         {
             // now, letter is definitely in word
@@ -148,12 +148,13 @@ function checkGuess () {
         
         
 
-        if (wrongCounter === wrongAmount){
+        if (wrongCounter === 5){
             guessntString = rightGuessString
             return
          }
         else{
-            toastr.info(`Wrong amount: "${wrongAmount}"`)
+            toastr.info(`Wrong amount: "${wrongCounter}"`)
+            return
         }
     
 
