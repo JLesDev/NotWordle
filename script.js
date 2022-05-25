@@ -84,7 +84,7 @@ function checkGuess () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining]
     let guessString = ''
     let rightGuess = Array.from(rightGuessString)
-    wrongCounter = 0;
+    wrongCounter = 0
 
     for (const val of currentGuess) {
         guessString += val
@@ -125,6 +125,7 @@ function checkGuess () {
 
             rightGuess[letterPosition] = "#"
         }
+        
         let delay = 250 * i
             setTimeout(()=> {
                 //flip box
@@ -137,8 +138,7 @@ function checkGuess () {
         
 
         if (wrongCounter === wrongAmount){
-            guessntString = rightGuessString;
- 
+            guessntString = rightGuessString
          }
     
 
