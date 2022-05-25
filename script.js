@@ -143,15 +143,27 @@ function checkGuess () {
                 shadeKeyBoard(letter, letterColor);
             }, delay);
         
+        }   
+       
+
+        wrongCounter = 0;
+        for (let i = 0; i < 5; i++) 
+        {
+            let letterPosition = rightGuess.indexOf(currentGuess[i]);
+            if (letterPosition === -1) 
+            {
+                wrongCounter += 1;
+            }
+        }
         if (wrongCounter === 5){
             guessntString = rightGuessString;
             return;
-         }
+        }
         else{
             toastr.info(`Wrong amount: "${wrongCounter}"`);
-            return;
+            return;  
         }
-
+            
         if (guessntString === rightGuessString) 
         {
         toastr.success("You won! Congrats!");
@@ -175,16 +187,8 @@ function checkGuess () {
         
         }
 
-    }
-    wrongCounter = 0;
-    for (let i = 0; i < 5; i++) 
-    {
-        let letterPosition = rightGuess.indexOf(currentGuess[i]);
-        if (letterPosition === -1) 
-        {
+    
 
-        }
-    }
     
 }
 
