@@ -42,7 +42,6 @@ document.addEventListener("keyup", (e) => {
     }
 
     if (pressedKey === "Enter") {
-        toastr.info("Pressed E Key");
         checkGuess();
         return;
     }
@@ -222,7 +221,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     const animationName = `${prefix}${animation}`;
     // const node = document.querySelector(element);
     const node = element;
-    node.style.setProperty('--animate-duration', '0.3s');
+    node.style.setProperty('--animate-duration', '0.5s');
     
     node.classList.add(`${prefix}animated`, animationName);
 
