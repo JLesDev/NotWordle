@@ -2,11 +2,10 @@ import { WORDS } from "./words.js";
 
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
-let guessntString = '';
 let currentGuess = [];
 let nextLetter = 0;
 let wrongCounter = 0;
-const wrongAmount = 5;
+
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 console.log(rightGuessString);
 
@@ -85,6 +84,7 @@ function checkGuess () {
     let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining];
     let guessString = '';
     let rightGuess = Array.from(rightGuessString);
+    let guessntString = '';
 
 
     for (const val of currentGuess) {
@@ -109,6 +109,8 @@ function checkGuess () {
         let letter = currentGuess[i];
         toastr.info(`Guesses "${guessesRemaining}"`);
         let letterPosition = rightGuess.indexOf(currentGuess[i]);
+        const wrongAmount = 5;
+
         // is letter in the correct guess
         if (letterPosition === -1) 
         {
@@ -155,7 +157,7 @@ function checkGuess () {
                 wrongCounter += 1;
             }
         }
-        if (wrongCounter === 5){
+        if (wrongCounter === wrongAmount){
             guessntString = rightGuessString;
             return;
         }
@@ -163,7 +165,7 @@ function checkGuess () {
             toastr.info(`Wrong amount: "${wrongCounter}"`);
             return;  
         }
-            
+
         if (guessntString === rightGuessString) 
         {
         toastr.success("You won! Congrats!");
