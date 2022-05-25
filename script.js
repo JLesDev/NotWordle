@@ -85,6 +85,7 @@ function checkGuess () {
     let guessString = '';
     let rightGuess = Array.from(rightGuessString);
     let guessntString = '';
+    const wrongAmount = 5;
 
 
     for (const val of currentGuess) {
@@ -109,7 +110,7 @@ function checkGuess () {
         let letter = currentGuess[i];
         toastr.info(`Guesses "${guessesRemaining}"`);
         let letterPosition = rightGuess.indexOf(currentGuess[i]);
-        const wrongAmount = 5;
+        
 
         // is letter in the correct guess
         if (letterPosition === -1) 
