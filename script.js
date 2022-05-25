@@ -130,12 +130,12 @@ function checkGuess () {
             if (currentGuess[i] === rightGuess[i]) 
             {
                 // shade green 
-                letterColor = 'green';
+                letterColor = 'lightgreen';
             } 
             else 
             {
                 // shade box yellow
-                letterColor = 'yellow';
+                letterColor = 'lemonchiffon';
             }
 
             rightGuess[letterPosition] = "#";
@@ -205,11 +205,11 @@ function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
             let oldColor = elem.style.backgroundColor;
-            if (oldColor === 'green') {
+            if (oldColor === 'lightgreen') {
                 return;
             } 
 
-            if (oldColor === 'yellow' && color !== 'green') {
+            if (oldColor === 'lemonchiffon' && color !== 'lightgreen') {
                 return;
             }
 
