@@ -108,7 +108,6 @@ function checkGuess () {
         let letterColor = '';
         let box = row.children[i];
         let letter = currentGuess[i];
-        toastr.info(`Guesses "${guessesRemaining}"`);
         let letterPosition = rightGuess.indexOf(currentGuess[i]);
         
 
@@ -161,7 +160,6 @@ function checkGuess () {
 
         if (wrongCounter === wrongAmount){
             guessntString = rightGuessString;
-            return;
         }
         toastr.info(`Test 1`);
         if (guessntString === rightGuessString) 
