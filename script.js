@@ -149,19 +149,13 @@ function checkGuess () {
        
 
         wrongCounter = 0;
-        for (let i = 0; i < 5; i++) 
-        {
-            let letterPosition = rightGuess.indexOf(currentGuess[i]);
-            if (letterPosition === -1) 
-            {
-                wrongCounter += 1;
-            }
-        }
+
+        
 
         if (wrongCounter === wrongAmount){
             guessntString = rightGuessString;
         }
-        toastr.info(`Test 1`);
+
         if (guessntString === rightGuessString) 
         {
         toastr.success("You won! Congrats!");
