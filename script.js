@@ -178,7 +178,7 @@ function checkGuess () {
         if (guessntString === rightGuessString) 
         {
         toastr.success("You won! Congrats!");
-        toastr.info(`The 'right word' was: "${rightGuessString}"`);
+        toastr.info(`The 'right' word was: "${rightGuessString}"`);
         guessesRemaining = 0;
         return;
         } 
