@@ -44,6 +44,7 @@ document.addEventListener("keyup", (e) => {
     }
 
     if (pressedKey === "Enter") {
+        toastr.info("Pressed E Key")
         checkGuess()
         return
     }
@@ -54,7 +55,7 @@ document.addEventListener("keyup", (e) => {
     } else {
         insertLetter(pressedKey)
     }
-}
+})
 
 function insertLetter (pressedKey) {
     if (nextLetter === 5) {
