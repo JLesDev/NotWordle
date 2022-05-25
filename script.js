@@ -110,7 +110,7 @@ function checkGuess () {
         // is letter in the correct guess
         if (letterPosition === -1) {
             letterColor = 'grey'
-            wrongCounter++;
+            wrongCounter += 1
         } else {
             // now, letter is definitely in word
             // if letter index and right guess index are the same
