@@ -171,13 +171,11 @@ function checkGuess () {
         guessesRemaining = 0;
         return;
         } 
-
         else 
         {
         guessesRemaining -= 1;
         currentGuess = [];
         nextLetter = 0;
-        return;
         }
 
         if (guessesRemaining === 0) 
