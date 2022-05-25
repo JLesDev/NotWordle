@@ -100,7 +100,14 @@ function checkGuess () {
         toastr.error("Word not in list!");
         return;
     }
-
+    for (let i = 0; i < 5; i++) 
+    {
+        let letterPosition = rightGuess.indexOf(currentGuess[i]);
+        if (letterPosition === -1) 
+        {
+            wrongCounter += 1;
+        }
+    }
     
     for (let i = 0; i < 5; i++) 
     {
@@ -114,7 +121,6 @@ function checkGuess () {
         if (letterPosition === -1) 
         {
             letterColor = 'grey';
-            wrongCounter += 1;
         }
         else 
         {
@@ -134,8 +140,19 @@ function checkGuess () {
 
             rightGuess[letterPosition] = "#";
         }
-        
-        let delay = 250 * i;
+        if (wrongCounter === wrongAmount){
+            let delay = 250 * i;
+            setTimeout(()=> {
+                //flip box
+                animateCSS(box, 'flipInX');
+                //shade box
+                box.style.backgroundColor = 'lightblue';
+                shadeKeyBoard(letter, 'lightblue');
+            }, delay);
+        }
+
+        else{
+            let delay = 250 * i;
             setTimeout(()=> {
                 //flip box
                 animateCSS(box, 'flipInX');
@@ -143,6 +160,8 @@ function checkGuess () {
                 box.style.backgroundColor = letterColor;
                 shadeKeyBoard(letter, letterColor);
             }, delay);
+        }
+        
         
         }   
        
@@ -154,6 +173,7 @@ function checkGuess () {
         if (wrongCounter === wrongAmount){
             guessntString = rightGuessString;
         }
+
 
         if (guessntString === rightGuessString) 
         {
