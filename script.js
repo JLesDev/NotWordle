@@ -97,8 +97,14 @@ function checkGuess () {
     }
 
     if (!WORDS.includes(guessString)) {
-        toastr.error("Word not in list!");
-        return;
+        if(guessString === 'myrrh'){
+            toastr.error("Myrrh is too good of a word to use.");
+            return;
+        }
+        else{
+            toastr.error("Word not in list!");
+            return;
+        }
     }
     for (let i = 0; i < 5; i++) 
     {
