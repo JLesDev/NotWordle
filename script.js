@@ -114,7 +114,6 @@ function checkGuess () {
         {
             letterColor = 'grey'
             wrongCounter += 1
-            return
         }
         else 
         {
@@ -125,13 +124,11 @@ function checkGuess () {
             {
                 // shade green 
                 letterColor = 'green'
-                return
             } 
             else 
             {
                 // shade box yellow
                 letterColor = 'yellow'
-                return
             }
 
             rightGuess[letterPosition] = "#"
