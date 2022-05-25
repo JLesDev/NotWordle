@@ -144,6 +144,9 @@ function checkGuess () {
             guessntString = rightGuessString
             return
          }
+        else{
+            toastr.info(`Wrong amount: "${wrongAmount}"`)
+        }
     
 
     if (guessntString === rightGuessString) {
