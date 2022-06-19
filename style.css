@@ -158,3 +158,16 @@ hr {
   background-color: black;
   height: 0.2rem;
 }
+
+@media (max-width: 1500px) {
+
+      .keyboard-button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+}
