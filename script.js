@@ -147,7 +147,7 @@ function checkGuess () {
             rightGuess[letterPosition] = "#";
         }
         if (wrongCounter === wrongAmount){
-            let delay = 501 * i;
+            let delay = 250 * i;
             setTimeout(()=> {
                 //flip box
                 animateCSS(box, 'flipInX');
@@ -157,7 +157,7 @@ function checkGuess () {
         }
 
         else{
-            let delay = 501 * i;
+            let delay = 250 * i;
             setTimeout(()=> {
                 //flip box
                 animateCSS(box, 'flipInX');
@@ -246,7 +246,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     const animationName = `${prefix}${animation}`;
     // const node = document.querySelector(element);
     const node = element;
-    node.style.setProperty('--animate-duration', '0.5s');
+    node.style.setProperty('--animate-duration', '0.3s');
     
     node.classList.add(`${prefix}animated`, animationName);
 
