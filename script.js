@@ -146,17 +146,8 @@ function checkGuess () {
 
             rightGuess[letterPosition] = "#";
         }
-        if (wrongCounter === wrongAmount){
-            let delay = 250 * i;
-            setTimeout(()=> {
-                //flip box
-                animateCSS(box, 'flipInX');
-                //shade box
-                box.style.backgroundColor = 'lightblue';
-            }, delay);
-        }
-
-        else{
+        if (wrongCounter != wrongAmount){
+            
             let delay = 250 * i;
             setTimeout(()=> {
                 //flip box
@@ -164,6 +155,15 @@ function checkGuess () {
                 //shade box
                 box.style.backgroundColor = letterColor;
                 shadeKeyBoard(letter, letterColor);
+            }, delay);
+        }
+        else{
+            let delay = 250 * i;
+            setTimeout(()=> {
+                //flip box
+                animateCSS(box, 'flipInX');
+                //shade box
+                box.style.backgroundColor = 'lightblue';
             }, delay);
         }
         
@@ -246,7 +246,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     const animationName = `${prefix}${animation}`;
     // const node = document.querySelector(element);
     const node = element;
-    node.style.setProperty('--animate-duration', '0.3s');
+    node.style.setProperty('--animate-duration', '0.5s');
     
     node.classList.add(`${prefix}animated`, animationName);
 
