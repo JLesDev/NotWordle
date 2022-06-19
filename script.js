@@ -153,7 +153,6 @@ function checkGuess () {
                 animateCSS(box, 'flipInX');
                 //shade box
                 box.style.backgroundColor = 'lightblue';
-                shadeKeyBoard(letter, 'lightblue');
             }, delay);
         }
 
