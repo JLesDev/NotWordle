@@ -165,12 +165,12 @@ hr {
   font-size: 0.8rem;
   font-weight: 500;
   padding: 0.2rem;
-  margin: 0 2px;
+  margin: 0 1px;
   cursor: pointer;
   text-transform: uppercase;
 }
     #keyboard-cont {
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
