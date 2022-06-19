@@ -147,7 +147,7 @@ function checkGuess () {
             rightGuess[letterPosition] = "#";
         }
         if (wrongCounter === wrongAmount){
-            let delay = 500 * i;
+            let delay = 501 * i;
             setTimeout(()=> {
                 //flip box
                 animateCSS(box, 'flipInX');
@@ -157,7 +157,7 @@ function checkGuess () {
         }
 
         else{
-            let delay = 500 * i;
+            let delay = 501 * i;
             setTimeout(()=> {
                 //flip box
                 animateCSS(box, 'flipInX');
