@@ -148,8 +148,10 @@ a{
   margin: 0 2px;
   cursor: pointer;
   text-transform: uppercase;
-  /* from code pen. i am no artist.*/
-  background-image: linear-gradient(to right, #b1e0d5 0%, #b1e0d5 51%, #84fab0 100%);
+  /* from code pen. i am no artist.
+  background-image: linear-gradient(to right, #b1e0d5 0%, #b1e0d5 51%, #84fab0 100%);*/
+  background-image: black;
+  text-color: white;
   justify-content: center;
   align-items: center;
   align-content: center;
