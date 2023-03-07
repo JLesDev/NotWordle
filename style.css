@@ -103,7 +103,7 @@ h1 {
   left: 0;
   right: 0;
   margin: auto;
-  background: pearl;
+  background: #FFEDE9;
   text-align: center;
   line-height: 4vh;
   border-color: black;
@@ -142,7 +142,7 @@ a{
 }
 
 #startButton{
-  font-size: 1rem;
+  font-size: 0.3rem;
   font-weight: 700;
   padding: 0.5rem;
   margin: 0 2px;
