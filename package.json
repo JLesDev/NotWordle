@@ -1,6 +1,8 @@
 {
-  "dependencies": {
-    "fireworks-js": "^1.4.0",
-    "live-server": "^1.1.0"
+  "name": "notwordle",
+  "version": "1.0.0",
+  "description": "This is Not Wordle",
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
