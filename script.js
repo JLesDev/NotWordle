@@ -14,6 +14,11 @@ let nextLetter = 0;
 let rightGuessString = words[Math.floor(Math.random() * words.length)];
 console.log(rightGuessString);
 
+// TODO: Change colors according to light or dark theme
+const c_YELLOW = "#c9b458";
+const c_GREEN = "#6aaa64";
+const c_LIGHTBLUE = "#7cd0eb";
+const c_GRAY = "#787c7e";
 
 function initBoard() {
   let board = document.getElementById("game-board");
@@ -103,7 +108,7 @@ function checkGuess() {
   }
 
   if (!words.includes(guessString)) {
-    if (guessString === 'myrrh') {
+    if (guessString === "myrrh") {
       toastr.error("Myrrh is too good of a word to use.");
       return;
     }
@@ -128,19 +133,17 @@ function checkGuess() {
 
     // is letter in the correct guess
     if (letterPosition === -1) {
-      letterColor = 'grey';
+      letterColor = c_GRAY;
     }
     else {
       // now, letter is definitely in word
       // if letter index and right guess index are the same
       // letter is in the right position 
       if (currentGuess[i] === rightGuess[i]) {
-        // shade green 
-        letterColor = 'green';
+        letterColor = c_GREEN;
       }
       else {
-        // shade box yellow
-        letterColor = 'yellow';
+        letterColor = c_YELLOW;
       }
 
       rightGuess[letterPosition] = "#";
@@ -162,7 +165,7 @@ function checkGuess() {
         //flip box
         animateCSS(box, 'flipInX');
         //shade box
-        box.style.backgroundColor = 'lightblue';
+        box.style.backgroundColor = c_LIGHTBLUE;
       }, delay);
     }
 
@@ -208,7 +211,7 @@ function shadeKeyBoard(letter, color) {
         return;
       }
 
-      if (oldColor === 'yellow' && color !== 'green') {
+      if (oldColor === '#c9b458' && color !== 'green') {
         return;
       }
 
