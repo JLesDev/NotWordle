@@ -1,37 +1,38 @@
 h1 {
-    text-align: center;
-    font-family: sans-serif;
-   }
+  text-align: center;
+  font-family: sans-serif;
+}
 
-   #game-board {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .letter-box {
-    border: 2px solid gray;
-    border-radius: 3px;
-    margin: 2px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    font-family: sans-serif;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-  }
-  
-  .filled-box {
-    border: 2px solid black;
-  }
-  
-  .letter-row {
-    display: flex;
-    font-family: sans-serif;
-  }
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.letter-row {
+  display: flex;
+  font-family: sans-serif;
+}
+
 /*
   #keyboard-cont{
       align-items: center;
@@ -65,8 +66,8 @@ h1 {
     margin: 0.1rem;
 }*/
 
-.toast-message{
-    font-family: sans-serif;
+.toast-message {
+  font-family: sans-serif;
 }
 
 
@@ -95,7 +96,7 @@ h1 {
   text-transform: uppercase;
 }
 
-#splash{
+#splash {
   position: fixed;
   z-index: 200;
   width: 20rem;
@@ -116,32 +117,33 @@ h1 {
   border-radius: 10px;
 }
 
-@keyframes fadeIn{
-  to{
+@keyframes fadeIn {
+  to {
     opacity: 1;
   }
 }
 
-.fade-in{
+.fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
 }
 
-h3{
-  font-family: sans-serif;
-  color: black;
-}
-p{
+h3 {
   font-family: sans-serif;
   color: black;
 }
 
-a{
+p {
+  font-family: sans-serif;
+  color: black;
+}
+
+a {
   font-family: sans-serif;
   text-decoration: none;
 }
 
-#startButton{
+#startButton {
   font-size: 0.3rem;
   font-weight: 700;
   padding: 0.5rem;
@@ -163,49 +165,50 @@ a{
 
 hr {
   border: 0;
-  clear:both;
-  display:block;
-  width: 90%;               
+  clear: both;
+  display: block;
+  width: 90%;
   background-color: black;
   height: 0.2rem;
 }
 
 @media (max-width: 1500px) {
 
-      .keyboard-button {
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 0.2rem;
-  margin: 0 1px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-    #keyboard-cont {
-  margin: 0.3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-    
-    #splash{
-  position: fixed;
-  z-index: 200;
-  width: 20rem;
-  height: 65%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background: white;
-  text-align: center;
-  line-height: 4vh;
-  border-color: black;
-  align-content: center;
-  display: flex;
-  border-style: solid;
-  flex-direction: column;
-  align-items: center;
-  border: 0.2rem solid black;
-  border-radius: 10px;
-}
+  .keyboard-button {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem;
+    margin: 0 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  #keyboard-cont {
+    margin: 0.3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #splash {
+    position: fixed;
+    z-index: 200;
+    width: 20rem;
+    height: 65%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    text-align: center;
+    line-height: 4vh;
+    border-color: black;
+    align-content: center;
+    display: flex;
+    border-style: solid;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2rem solid black;
+    border-radius: 10px;
+  }
 
 }
