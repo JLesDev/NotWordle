@@ -87,8 +87,8 @@ function deleteLetter() {
 function checkGuess() {
   let row = document.getElementsByClassName("letter-row")[NUMBER_OF_GUESSES - guessesRemaining];
   let guessString = "";
-  let rightGuess = Array.from(rightGuessString);
   let guessntString = "";
+  let rightGuess = Array.from(rightGuessString);
   const wrongAmount = 5;
   let wrongCounter = 0;
 
@@ -173,8 +173,7 @@ function checkGuess() {
     guessntString = rightGuessString;
   }
 
-  //console.log(guessString, rightGuessString, guessntString === rightGuessString)
-  //console.log(typeof(guessString), typeof(rightGuessString))
+  // Note that the whole point is to get a word not containing any common letters to the given word
   if (guessntString === rightGuessString) {
     toastr.success("You won! Congrats!");
     toastr.info(`The 'right' word was: "${rightGuessString}"`);
@@ -190,6 +189,12 @@ function checkGuess() {
   if (guessesRemaining === 0) {
     toastr.error("You've run out of guesses! Game over!");
     toastr.info(`The right word was: "${rightGuessString}"`);
+    return;
+  }
+
+  if (guessString === rightGuessString) {
+    toastr.error("The objective isn't to get the correct word!");
+    toastr.error("This is Not Wordle! Make a word that contains no letters present in the unknown target word.");
     return;
   }
 
