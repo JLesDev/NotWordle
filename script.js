@@ -1,3 +1,9 @@
+// TODO: Change colors according to light or dark theme
+const c_YELLOW = "#c9b458";
+const c_GREEN = "#6aaa64";
+const c_LIGHTBLUE = "#7cd0eb";
+const c_GRAY = "#787c7e";
+
 const baseURL = window.location.origin;
 const requestURL = baseURL + "/words.json"
 const request = new Request(requestURL);
@@ -13,12 +19,6 @@ let nextLetter = 0;
 
 let rightGuessString = words[Math.floor(Math.random() * words.length)];
 console.log(rightGuessString);
-
-// TODO: Change colors according to light or dark theme
-const c_YELLOW = "#c9b458";
-const c_GREEN = "#6aaa64";
-const c_LIGHTBLUE = "#7cd0eb";
-const c_GRAY = "#787c7e";
 
 function initBoard() {
   let board = document.getElementById("game-board");
@@ -211,7 +211,7 @@ function shadeKeyBoard(letter, color) {
         return;
       }
 
-      if (oldColor === '#c9b458' && color !== 'green') {
+      if (oldColor === c_YELLOW && color !== c_GREEN) {
         return;
       }
 
@@ -241,7 +241,6 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
-    // const node = document.querySelector(element);
     const node = element;
     node.style.setProperty('--animate-duration', '0.5s');
 
