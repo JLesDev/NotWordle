@@ -82,6 +82,12 @@ hr {
   border: 2px solid var(--fg-color);
 }
 
+/*
+.filled-box {
+  border: 2px solid var(--fg-color);
+}
+*/
+
 .letter-row {
   display: flex;
 }
