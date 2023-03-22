@@ -103,13 +103,21 @@ function checkGuess() {
   }
 
   if (guessString.length != 5) {
-    toastr.error("Not enough letters!");
+    toastr.error("Not enough letters! Idiot.");
     return;
   }
 
   if (!words.includes(guessString)) {
     if (guessString === "myrrh") {
       toastr.error("Myrrh is too good of a word to use.");
+      return;
+    }
+    else if (guessString === "bitch") {
+      toastr.error("Watch your mouth you dirty dog.");
+      return;
+    }
+    else if (guessString === "whore") {
+      toastr.error("Sex work should be legal but this is not the time.");
       return;
     }
     else {
@@ -191,7 +199,7 @@ function checkGuess() {
 
   if (guessesRemaining === 0) {
     toastr.error("You've run out of guesses! Game over!");
-    toastr.info(`The right word was: "${rightGuessString}"`);
+    toastr.info(`The 'right' word was: "${rightGuessString}"`);
     return;
   }
 
