@@ -113,6 +113,7 @@ function checkGuess() {
       return;
     }
     else if (guessString === "bitch") {
+      /*employers skip this part*/
       toastr.error("Watch your mouth you dirty dog.");
       return;
     }
