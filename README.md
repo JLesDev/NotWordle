@@ -14,3 +14,5 @@ npx live-server
 ### The VS Code way
 - Install the Live Server extension
 - Click "Go Live" in the bottom status bar
+
+RISHI HELPED WITH DESIGN
