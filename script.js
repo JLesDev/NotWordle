@@ -10,7 +10,7 @@ const request = new Request(requestURL);
 
 const response = await fetch(request);
 const wordJSON = await response.json();
-let words = wordJSON["words"]
+let words = wordJSON["words"];
 
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
