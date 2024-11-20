@@ -8,7 +8,7 @@ const baseURL = window.location.origin;
 const requestURL = baseURL + "/words.json";
 const request = new Request(requestURL);
 
-const response = await Fetch(request);
+const response = await fetch(request);
 const wordJSON = await response.json();
 let words = wordJSON["words"];
 
